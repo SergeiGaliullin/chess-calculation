@@ -5243,7 +5243,9 @@ var $author$project$Main$allExercises = $elm$core$Array$fromList(
 		[
 			{correctAnswer: '♙e4♙e5♕h5♔e7♕e5', fromPositionImage: 'initial.png', toPositionImage: '1.png'},
 			{correctAnswer: '♙d4♙c5♙e4♙d4♘f3♙e5', fromPositionImage: 'initial.png', toPositionImage: '2.png'},
-			{correctAnswer: '♘e5♕a5♗d2♕e5', fromPositionImage: '2.png', toPositionImage: '3.png'}
+			{correctAnswer: '♘e5♕a5♗d2♕e5', fromPositionImage: '2.png', toPositionImage: '3.png'},
+			{correctAnswer: '♙g4♙d5♗g2♗g4♙c4♙e6', fromPositionImage: 'initial.png', toPositionImage: '4.png'},
+			{correctAnswer: '♙c5♗c5♕a4♙c6♕g4', fromPositionImage: '4.png', toPositionImage: '5.png'}
 		]));
 var $author$project$Main$defaultExercise = {correctAnswer: 'x', fromPositionImage: 'initial.png', toPositionImage: 'initial.png'};
 var $elm$core$Bitwise$and = _Bitwise_and;
