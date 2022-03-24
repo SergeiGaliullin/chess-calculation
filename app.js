@@ -4392,7 +4392,7 @@ var _Bitwise_shiftRightZfBy = F2(function(offset, a)
 {
 	return a >>> offset;
 });
-var $author$project$Main$initialModel = {correctAnswer: '♙e4♙e5♕h5♔e7♕e5', currentExercise: 0, fromPositionImage: 'initial.png', toPositionImage: '1.png', userAnswer: ''};
+var $author$project$Main$initialModel = {correctAnswer: '♙e4♙e5♕h5♔e7♕e5', currentExercise: 0, currentMoveStep: 1, fromPositionImage: 'initial.png', toPositionImage: '1.png', userAnswer: ''};
 var $elm$core$Basics$EQ = {$: 'EQ'};
 var $elm$core$Basics$GT = {$: 'GT'};
 var $elm$core$Basics$LT = {$: 'LT'};
@@ -5247,7 +5247,7 @@ var $author$project$Main$allExercises = $elm$core$Array$fromList(
 			{correctAnswer: '♙g4♙d5♗g2♗g4♙c4♙e6', fromPositionImage: 'initial.png', toPositionImage: '4.png'},
 			{correctAnswer: '♙c5♗c5♕a4♙c6♕g4', fromPositionImage: '4.png', toPositionImage: '5.png'}
 		]));
-var $author$project$Main$defaultExercise = {correctAnswer: 'x', fromPositionImage: 'initial.png', toPositionImage: 'initial.png'};
+var $author$project$Main$defaultExercise = {correctAnswer: 'xxxxxx', fromPositionImage: 'initial.png', toPositionImage: 'initial.png'};
 var $elm$core$Bitwise$and = _Bitwise_and;
 var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
 var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
@@ -5300,12 +5300,22 @@ var $author$project$Main$getNextExercise = F2(
 			return $author$project$Main$defaultExercise;
 		}
 	});
+var $author$project$Main$getNextStep = function (currentStep) {
+	var step = currentStep + 1;
+	return (step === 4) ? 1 : step;
+};
+var $author$project$Main$getPreviousStep = F2(
+	function (currentStep, userAnswer) {
+		var step = currentStep - 1;
+		return (!step) ? ((!$elm$core$String$length(userAnswer)) ? 1 : 3) : step;
+	});
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		if (msg.description === 'ClickedMove') {
 			return _Utils_update(
 				model,
 				{
+					currentMoveStep: $author$project$Main$getNextStep(model.currentMoveStep),
 					userAnswer: _Utils_ap(model.userAnswer, msg.data)
 				});
 		} else {
@@ -5313,6 +5323,7 @@ var $author$project$Main$update = F2(
 				return _Utils_update(
 					model,
 					{
+						currentMoveStep: A2($author$project$Main$getPreviousStep, model.currentMoveStep, model.userAnswer),
 						userAnswer: A3(
 							$elm$core$String$slice,
 							0,
@@ -5324,7 +5335,7 @@ var $author$project$Main$update = F2(
 					var nextExercise = A2($author$project$Main$getNextExercise, model.currentExercise, $author$project$Main$allExercises);
 					return _Utils_update(
 						model,
-						{correctAnswer: nextExercise.correctAnswer, currentExercise: model.currentExercise + 1, fromPositionImage: nextExercise.fromPositionImage, toPositionImage: nextExercise.toPositionImage, userAnswer: ''});
+						{correctAnswer: nextExercise.correctAnswer, currentExercise: model.currentExercise + 1, currentMoveStep: 1, fromPositionImage: nextExercise.fromPositionImage, toPositionImage: nextExercise.toPositionImage, userAnswer: ''});
 				} else {
 					return model;
 				}
@@ -5409,9 +5420,8 @@ var $elm$html$Html$Attributes$classList = function (classes) {
 				A2($elm$core$List$filter, $elm$core$Tuple$second, classes))));
 };
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Main$files = _List_fromArray(
-	['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
 var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$core$Basics$neq = _Utils_notEqual;
 var $elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
 };
@@ -5636,10 +5646,6 @@ var $author$project$Main$parseMove = function (str) {
 							3,
 							A2($elm$core$String$split, '', str)))))));
 };
-var $author$project$Main$pieces = _List_fromArray(
-	['♔', '♕', '♘', '♗', '♖', '♙']);
-var $author$project$Main$ranks = _List_fromArray(
-	['1', '2', '3', '4', '5', '6', '7', '8']);
 var $elm$html$Html$Attributes$src = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5648,6 +5654,12 @@ var $elm$html$Html$Attributes$src = function (url) {
 };
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Main$files = _List_fromArray(
+	['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']);
+var $author$project$Main$pieces = _List_fromArray(
+	['♔', '♕', '♘', '♗', '♖', '♙']);
+var $author$project$Main$ranks = _List_fromArray(
+	['1', '2', '3', '4', '5', '6', '7', '8']);
 var $author$project$Main$viewMoves = function (moveSymbol) {
 	return A2(
 		$elm$html$Html$div,
@@ -5661,6 +5673,16 @@ var $author$project$Main$viewMoves = function (moveSymbol) {
 			[
 				$elm$html$Html$text(moveSymbol)
 			]));
+};
+var $author$project$Main$viewCurrentMoveSymbols = function (currentMoveStep) {
+	switch (currentMoveStep) {
+		case 1:
+			return A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$pieces);
+		case 2:
+			return A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$files);
+		default:
+			return A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$ranks);
+	}
 };
 var $author$project$Main$viewParsedMoves = function (move) {
 	return A2(
@@ -5750,21 +5772,7 @@ var $author$project$Main$view = function (model) {
 									[
 										$elm$html$Html$Attributes$class('moves')
 									]),
-								A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$pieces)),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('moves')
-									]),
-								A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$files)),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('moves')
-									]),
-								A2($elm$core$List$map, $author$project$Main$viewMoves, $author$project$Main$ranks)),
+								$author$project$Main$viewCurrentMoveSymbols(model.currentMoveStep)),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
@@ -5802,7 +5810,14 @@ var $author$project$Main$view = function (model) {
 												$elm$html$Html$Attributes$class('button-6'),
 												A2($elm$html$Html$Attributes$attribute, 'role', 'button'),
 												$elm$html$Html$Events$onClick(
-												{data: '', description: 'ClickedNext'})
+												{data: '', description: 'ClickedNext'}),
+												$elm$html$Html$Attributes$classList(
+												_List_fromArray(
+													[
+														_Utils_Tuple2(
+														'button-6-disabled',
+														!_Utils_eq(model.userAnswer, model.correctAnswer))
+													]))
 											]),
 										_List_fromArray(
 											[
