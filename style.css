@@ -58,11 +58,12 @@
   flex-direction: row;
   flex-basis: 50px;
   justify-content: center;
-  background-color: #a6bbff;
+  background-color: aliceblue;
   padding: 6px;
   margin: 5px;
   cursor: pointer;
-  font-size: 55px;
+  font-size: 33px;
+  border: 1px solid black;
 }
 
 .right-side {
@@ -108,7 +109,14 @@
 }
 
 .answers {
-    background-color: #eaeaea;
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.exercise-number {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 20px;
@@ -116,7 +124,8 @@
 }
 
 .move {
-    background-color: #eaeaea;
+    background-color: #ffffff;
+    font-size: 22px;
 }
 
 
@@ -138,6 +147,7 @@
      line-height: 1.25;
      margin: 0;
      min-height: 3rem;
+     /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
      padding: calc(.875rem - 1px) calc(1.5rem - 1px);
      position: relative;
      text-decoration: none;
@@ -147,6 +157,7 @@
      touch-action: manipulation;
      vertical-align: baseline;
      width: auto;
+
 }
 
 .button-6:hover,
@@ -178,9 +189,8 @@
 }
 
 .correct-visible {
-    color: green;
+    color: #00e100;
     display: flex;
-    align-self: center;
 }
 
 .general {
