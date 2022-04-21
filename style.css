@@ -7,6 +7,11 @@
     background-color: aliceblue;
 }
 
+@font-face {
+    font-family: chessFont;
+    src: url(MERIFONT.TTF);
+}
+
 .container {
     background-color: #cacaca;
     padding: 10px;
@@ -110,6 +115,7 @@
 
 .answers {
     background-color: #ffffff;
+    width: 160px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 20px;
@@ -126,6 +132,7 @@
 .move {
     background-color: #ffffff;
     font-size: 22px;
+    font-family: FreeSerif;
 }
 
 
@@ -218,3 +225,6 @@
     width: 51px;
     background-color: transparent;
 }
+
+
+
