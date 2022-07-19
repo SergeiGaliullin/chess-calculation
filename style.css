@@ -225,4 +225,20 @@
     font-size: 15px;
 }
 
+.user-answers {
+    background-color: white;
+    width: 180px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+.current-exercise-border {
+    border: black 2px solid;
+}
+
+.user-answer-cell {
+    height: 50px;
+    width: 180px;
+    background-color: white;
+}
