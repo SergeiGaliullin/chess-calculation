@@ -66,6 +66,15 @@
   border: 1px solid black;
 }
 
+.king-safety-button {
+    width: 150px;
+    justify-content: center;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
 .right-side {
   display: flex;
   flex-direction: column;
