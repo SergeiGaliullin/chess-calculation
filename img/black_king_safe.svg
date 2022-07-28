@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg width="45" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.1">
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <g fill="none" fill-rule="evenodd" id="svg_1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" stroke-width="1.5">
+   <path d="m22.5,11.63l0,-5.63" fill="none" id="path6570" stroke="#000000"/>
+   <path d="m22.5,25c0,0 4.5,-7.5 3,-10.5c0,0 -1,-2.5 -3,-2.5c-2,0 -3,2.5 -3,2.5c-1.5,3 3,10.5 3,10.5" fill="#000000" id="svg_2"/>
+   <path d="m12.5,37c5.5,3.5 14.5,3.5 20,0l0,-7c0,0 9,-4.5 6,-10.5c-4,-6.5 -13.5,-3.5 -16,4l0,3.5l0,-3.5c-2.5,-7.5 -12,-10.5 -16,-4c-3,6 6,10.5 6,10.5l0,7" fill="#000000" id="svg_3" stroke="#000000"/>
+   <path d="m20,8l5,0" fill="none" id="svg_4" stroke="#000000"/>
+   <path d="m32,29.5c0,0 8.5,-4 6.03,-9.65c-3.88,-5.85 -13.03,-1.85 -15.53,4.65l0,2.1l0,-2.1c-2.5,-6.5 -11.65,-10.5 -15.53,-4.65c-2.47,5.65 6.03,9.65 6.03,9.65" fill="none" id="svg_5" stroke="#ffffff"/>
+   <path d="m12.5,30c5.5,-3 14.5,-3 20,0m-20,3.5c5.5,-3 14.5,-3 20,0m-20,3.5c5.5,-3 14.5,-3 20,0" fill="none" id="svg_6" stroke="#ffffff"/>
+  </g>
+  <line fill="none" id="svg_8" stroke="#7fff00" stroke-width="5" transform="matrix(1, 0, 0, 1, 0, 0)" x1="-1.2" x2="-1.2" y1="-1.4" y2="46.6"/>
+  <line fill="none" id="svg_9" stroke="#7fff00" stroke-width="5" transform="matrix(1, 0, 0, 1, 0, 0)" x1="-3.6" x2="45.1" y1="46.2" y2="45.9"/>
+  <line fill="none" fill-opacity="null" id="svg_10" stroke="#7fff00" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" transform="matrix(1, 0, 0, 1, 0, 0)" x1="45.4" x2="46.1" y1="-1.8" y2="48.6"/>
+  <line fill="none" fill-opacity="null" id="svg_11" stroke="#7fff00" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" x1="-3.8" x2="48.2" y1="-0.4" y2="-0.7"/>
+ </g>
+</svg>
