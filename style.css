@@ -204,6 +204,11 @@
     display: flex;
 }
 
+.incorrect-visible {
+    color: red;
+    display: flex;
+}
+
 .general {
     display: flex;
     flex-direction: column;
@@ -224,10 +229,15 @@
     background: burlywood;
 }
 
-.piece-image {
-    height: 51px;
-    width: 51px;
+.board-piece-image {
     background-color: transparent;
+    position: relative;
+    top: calc(50% - 23px);
+    left: calc(50% - 23px);
+}
+
+.board-piece-image-inactive {
+    opacity: .2;
 }
 
 .answer-text {
@@ -242,8 +252,41 @@
     margin-right: 20px;
 }
 
+.answers {
+    background-color: #ffffff;
+    width: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.user-answers-calculation {
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.edit-variations-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
 .current-exercise-border {
     border: black 2px solid;
+}
+
+.error-exercise-border {
+    border: red 2px solid;
+}
+
+.correct-exercise-border {
+    border: #07f707 2px solid;
 }
 
 .user-answer-cell {
