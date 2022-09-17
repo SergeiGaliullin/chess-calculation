@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-size: 25px;
     font-family: monospace;
-    background-color: aliceblue;
 }
 
 .container {
@@ -244,6 +243,18 @@
     font-size: 15px;
 }
 
+.answer-move-text {
+    font-size: 20px;
+}
+
+.answer-piece {
+    top: .225em;
+    left: .125em;
+    position: relative;
+    display: inline-flex;
+    align-self: baseline;
+}
+
 .user-answers {
     background-color: white;
     width: 180px;
@@ -270,6 +281,24 @@
     margin-right: 20px;
 }
 
+.variation-background {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+.red-color {
+    color: red;
+}
+
+.green-color {
+    color: green;
+}
+
+.user-answers-new {
+    display: inline-flex;
+}
+
 .edit-variations-container {
     display: flex;
     flex-direction: row;
@@ -287,6 +316,10 @@
 
 .correct-exercise-border {
     border: #07f707 2px solid;
+}
+
+.current-variation-border {
+    border: gray 2px dotted;
 }
 
 .user-answer-cell {
