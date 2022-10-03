@@ -327,3 +327,11 @@
     width: 180px;
     background-color: white;
 }
+
+.cell-grid-coordinate {
+    top: 2px;
+    left: 2px;
+    font-size: 9px;
+    overflow: visible;
+    height: 0;
+}
