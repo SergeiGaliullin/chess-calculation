@@ -307,15 +307,15 @@
 }
 
 .current-exercise-border {
-    border: black 2px solid;
+    border: black 0.5px solid;
 }
 
 .error-exercise-border {
-    border: red 2px solid;
+    border: red 0px solid;
 }
 
 .correct-exercise-border {
-    border: #07f707 2px solid;
+    border: #07f707 0px solid;
 }
 
 .current-variation-border {
@@ -324,7 +324,7 @@
 
 .user-answer-cell {
     height: 50px;
-    width: 180px;
+    width: 800px;
     background-color: white;
 }
 
