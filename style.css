@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,52 +17,52 @@
 }
 
 .task-image {
-  padding: 5px;
-  background-color: grey;
-  margin-left: 5px;
-  align-self: center;
+    padding: 5px;
+    background-color: grey;
+    margin-left: 5px;
+    align-self: center;
 }
 
 .task-display {
-  background-color: grey;
-  margin-left: 5px;
-  display: flex;
-  justify-content: flex-start;
-  flex-grow: 0;
+    background-color: grey;
+    margin-left: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 0;
 }
 
 .moves-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .edit-moves-container {
-  font-size: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-basis: 50px;
-  padding: 6px;
-  margin: 5px;
-  cursor: pointer;
+    font-size: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50px;
+    padding: 6px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 .moves {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .icon-container {
-  display: flex;
-  flex-direction: row;
-  flex-basis: 50px;
-  justify-content: center;
-  background-color: aliceblue;
-  padding: 6px;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 33px;
-  border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50px;
+    justify-content: center;
+    background-color: aliceblue;
+    padding: 6px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 33px;
+    border: 1px solid black;
 }
 
 .king-safety-button {
@@ -75,26 +75,26 @@
 }
 
 .right-side {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  height: 510px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    height: 510px;
 }
 
 .check-button {
-  margin-top: auto;
+    margin-top: auto;
 }
 
 .task-explanation {
-  font-size: 15px;
-  padding-left: 5px;
-  padding-top: 10px;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 10px;
 }
 
 .candidate-moves {
-  font-size: 20px;
-  padding-left: 5px;
-  padding-top: 5px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 .wrong {
@@ -139,34 +139,34 @@
 }
 
 
- /* CSS */
+/* CSS */
 .button-6 {
-     align-items: center;
-     background-color: #FFFFFF;
-     border: 1px solid rgba(0, 0, 0, 0.1);
-     border-radius: .25rem;
-     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-     box-sizing: border-box;
-     color: rgba(0, 0, 0, 0.85);
-     cursor: pointer;
-     display: inline-flex;
-     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-     font-size: 16px;
-     font-weight: 600;
-     justify-content: center;
-     line-height: 1.25;
-     margin: 0;
-     min-height: 3rem;
-     /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
-     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-     position: relative;
-     text-decoration: none;
-     transition: all 250ms;
-     user-select: none;
-     -webkit-user-select: none;
-     touch-action: manipulation;
-     vertical-align: baseline;
-     width: auto;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
 
 }
 
@@ -218,6 +218,7 @@
     display: grid;
     grid-template-columns: 51px 51px 51px 51px 51px 51px 51px 51px;
     grid-template-rows: 51px 51px 51px 51px 51px 51px 51px 51px;
+    cursor: pointer;
 }
 
 .white-cell {
