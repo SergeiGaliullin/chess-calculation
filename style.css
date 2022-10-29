@@ -198,12 +198,20 @@
     display: none;
 }
 
+.check-button-message-container {
+    display: inline-flex;
+}
+
 .correct-visible {
-    color: #00e100;
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #0b8f0b;
     display: flex;
 }
 
 .incorrect-visible {
+    padding-left: 20px;
+    padding-top: 30px;
     color: red;
     display: flex;
 }
